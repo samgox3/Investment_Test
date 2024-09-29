@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: investment_test
+  datasource:
+    url: "jdbc:mariadb://localhost:30006/mydb"         # MariaDB 連接的 URL，包含數據庫名稱
+    username: "root"                                 # 連接數據庫的用戶名
+    password: "1qaz@WSX3edc"                               # 連接數據庫的密碼
+    driver-class-name: "org.mariadb.jdbc.Driver"       # MariaDB 驅動類
+  jpa:
+    hibernate:
+      ddl-auto: "update"                               # 自動更新數據庫表結構（選擇 none, update, create, create-drop）
+    show-sql: "true"                                   # 是否在控制台顯示 SQL 查詢語句
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+    #database-platform: org.hibernate.dialect.MariaDBDialect # MariaDB 的 Hibernate 方言
+server:
+  port: 9090
